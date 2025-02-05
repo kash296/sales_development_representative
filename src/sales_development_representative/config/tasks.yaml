@@ -9,18 +9,15 @@ lead_research_task:
   agent: sales_development_representative
 
 email_creation_task:
-  description:
+  description: |
     Using the research on the company and key contact, craft a personalized cold email aimed at highlighting our products/services.
     The email should invite the lead for a demo meeting in a compelling way.
     Use the following signature details:
     - Name: {sender_name}
     - Position: {sender_position}
-    - Company: {sender_company}
     - Email: {sender_email}
     - Phone: {sender_phone}
-  expected_output:
+  expected_output: |
     A personalized email ready to be sent, formatted in plain text. The email should be professional, engaging, and directly address 
     the needs and interests of the lead as derived from the research. The signature should use the provided contact details.
   agent: cold_email_creator
-
-  
