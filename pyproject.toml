@@ -1,0 +1,23 @@
+[project]
+name = "sales_development_representative"
+version = "0.1.0"
+description = "Sales Development Representative using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.100.1,<1.0.0"
+]
+
+[project.scripts]
+sales_development_representative = "sales_development_representative.main:run"
+run_crew = "sales_development_representative.main:run"
+train = "sales_development_representative.main:train"
+replay = "sales_development_representative.main:replay"
+test = "sales_development_representative.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

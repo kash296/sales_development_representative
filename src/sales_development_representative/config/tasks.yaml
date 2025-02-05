@@ -1,0 +1,26 @@
+web_scraping_task:
+  description: "Scrape the target company website {target_company} to gather relevant information and insights."
+  expected_output: "Extracted text data from the specified company's website."
+  agent: web_scraper
+
+lead_research_task:
+  description: "Perform comprehensive research on the target company {target_company} using the available information and research their key contacts for a cold email campaign. Ensure that you gather current and relevant information that can be used to personalize the outreach email."
+  expected_output: "A detailed profile containing 5 bullet points on the company and 5 bullet points on the key contact. Each point should be actionable and relevant to our sales objectives."
+  agent: sales_development_representative
+
+email_creation_task:
+  description:
+    Using the research on the company and key contact, craft a personalized cold email aimed at highlighting our products/services.
+    The email should invite the lead for a demo meeting in a compelling way.
+    Use the following signature details:
+    - Name: {sender_name}
+    - Position: {sender_position}
+    - Company: {sender_company}
+    - Email: {sender_email}
+    - Phone: {sender_phone}
+  expected_output:
+    A personalized email ready to be sent, formatted in plain text. The email should be professional, engaging, and directly address 
+    the needs and interests of the lead as derived from the research. The signature should use the provided contact details.
+  agent: cold_email_creator
+
+  
